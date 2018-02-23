@@ -11,12 +11,12 @@ public class Lab10e
 {
 	public static void main(String args[])
 	{
+		System.out.println("Guessing Game: Guess a number ");
 		Scanner keyboard = new Scanner(System.in);
-		char response;
-
-
-
-
-
+		int response = keyboard.nextInt();
+		GuessingGame test = new GuessingGame(response);
+		test.playGame();
+		System.out.println(test);
+			
 	}
 }
