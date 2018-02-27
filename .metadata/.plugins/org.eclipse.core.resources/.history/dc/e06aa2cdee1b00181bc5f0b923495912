@@ -1,0 +1,28 @@
+//© A+ Computer Science  -  www.apluscompsci.com
+//Name -
+//Date -
+//Class -
+//Lab  -
+
+import static java.lang.System.*;
+
+public class Lab14i
+{
+	public static void main( String args[] )
+	{
+		RomanNumeral test = new RomanNumeral(10);
+
+
+		test.setRoman("LXXVII");
+		out.println("LXXVII is " + test.getNumber() + "\n");
+
+		test.setRoman("XLIX");
+		out.println("XLIX is " + test.getNumber() + "\n");
+
+		test.setRoman("XX");
+		out.println("XX is " + test.getNumber() + "\n");
+
+		test.setRoman("XLIX");
+		out.println("XLIX is " + test.getNumber() + "\n");
+	}
+}
