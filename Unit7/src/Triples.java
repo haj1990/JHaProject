@@ -38,23 +38,30 @@ public class Triples
 
 	public String toString()
 	{
-		String output="test";
-		int a;
-		int b;
-		int c;
+		int a = 0;
+		int b = 0;
+		int c = 0;
+		String output="";
 
-		for (int i = 1; i<=number; i++){
+		for (int i = 1; i<=number; i++)
+		{
 			a = i;
-			for (int j = i; j<=number; j++) {
+			for (int j = i; j<=number; j++) 
+			{
 				b = j;
-				for (int k = j; j<=number; k++) {
+				for (int k = j; j<=number; k++) 
+				{
 					c = k;
-					if ((a*a + b*b == c*c) && (greatestCommonFactor(a, b, c) == 1) && (a%2 == 0 && b%2 == 1 || a%2 == 1 && b%2 == 0) && c%2 == 1) {
-						output += a + " " + b + " " + c + "\n";
+					if (greatestCommonFactor(a, b, c) == 1) {
+						if ((a%2 == 0 && b%2 == 1) || (a%2 == 1 && b%2 == 0) && c%2 == 1) {
+							if ((a*a) + (b*b) == (c*c)) {
+						output = output + "\n" + a + " " + b + " " + c + "\n";
 					}
 				}
 			}
 		}
-		return output;
 	}
+}
+		return output;
+}
 }
