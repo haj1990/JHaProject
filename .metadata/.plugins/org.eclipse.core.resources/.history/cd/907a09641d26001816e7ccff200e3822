@@ -18,7 +18,5 @@ public class DeckTester {
 		System.out.println(test.deal());
 		System.out.println(test.deal());
 		System.out.println(test.deal());
-		
-		System.out.println(test);
 	}
 }
