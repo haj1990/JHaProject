@@ -1,0 +1,85 @@
+//© A+ Computer Science  -  www.apluscompsci.com
+//Name -
+//Date -
+//Class -
+//Lab  -
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+public class Ball extends Block
+{
+	private int xSpeed;
+	private int ySpeed;
+
+	public Ball()
+	{
+		super(200,200);
+		xSpeed = 3;
+		ySpeed = 1;
+	}
+	
+	public Ball(int x, int y) {
+		super(x,y);
+	}
+	
+	public Ball(int x, int y, int wide, int tall) {
+		super(x,y,wide,tall);
+	}
+	
+	public Ball(int x, int y, int wide, int tall, Color col) {
+		super(x,y,wide,tall, col);
+	}
+	
+	public Ball(int x, int y, int wide, int tall, int xs, int ys) {
+		super(x,y,wide,tall);
+		setXSpeed(xs);
+		setYSpeed(ys);
+	}
+	
+	public Ball(int x, int y, int wide, int tall, Color col, int xs, int ys) {
+		super(x,y,wide,tall,col);
+		setXSpeed(xs);
+		setYSpeed(ys);
+	}
+	   
+   public void setXSpeed(int x) {
+	   xSpeed = x;
+   }
+   
+   public void setYSpeed(int y) {
+	   ySpeed = y;
+   }
+   
+
+   public void moveAndDraw(Graphics window)
+   {
+
+	  draw(window, Color.white);
+      setX(getX()+xSpeed);
+      setY(getY()+ySpeed);
+		draw(window);
+   }
+   
+	public boolean equals(Object obj)
+	{
+		if (((Block)obj).getX() == getX() && ((Block)obj).getY() == getY() && ((Block)obj).getWidth() == getWidth() && ((Block)obj).getHeight() == getHeight() && ((Ball)obj).getXSpeed() == getXSpeed() && ((Ball)obj).getYSpeed() == getYSpeed()) {
+			return true;
+		}
+		return false;
+	}   
+
+   public int getXSpeed() {
+	   return xSpeed;
+   }
+   
+   public int getYSpeed() {
+	   return ySpeed;
+   }
+
+	public String toString() {
+		String output = "";
+		output += getX() + " " + getY() + " " + getWidth() + " " + getHeight() + " " + getColor() + " " + getXSpeed() + " " + getYSpeed();
+		return output;
+	}
+}
